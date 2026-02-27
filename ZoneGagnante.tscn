@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://4k1y5m26yoqi"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8f2nu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qeu34"]
+size = Vector2(112, 112)
+
+[node name="Sprite2D" type="Sprite2D" unique_id=216072968]
+modulate = Color(0.6156863, 0.99215686, 0.59607846, 0.41568628)
+texture = SubResource("CanvasTexture_8f2nu")
+region_enabled = true
+region_rect = Rect2(0, 0, 100, 100)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1529483141]
+position = Vector2(-3, 0)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=597170387]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_qeu34")

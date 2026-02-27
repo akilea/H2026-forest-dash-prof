@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bh0cbyl63lov7"]
+
+[ext_resource type="Script" uid="uid://c2nr77e2r4u31" path="res://Chien.cs" id="1_olwrm"]
+[ext_resource type="Texture2D" uid="uid://cmbeccpuqcbi3" path="res://res/Pet Dogs Pack/Dog-1-Golden-Retriever/Golden-Retriever-idle.png" id="2_w4hss"]
+[ext_resource type="Script" uid="uid://b2xljy2v27rci" path="res://Library/Util/Poursuite.cs" id="3_n5663"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n5663"]
+radius = 19.0
+height = 94.0
+
+[node name="Chien" type="Node2D" unique_id=159615892 node_paths=PackedStringArray("_Poursuite") groups=["Chasseur"]]
+script = ExtResource("1_olwrm")
+_Poursuite = NodePath("DPM_Poursuite")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2028709627]
+scale = Vector2(4, 4)
+texture = ExtResource("2_w4hss")
+hframes = 10
+frame = 5
+
+[node name="Area2D" type="Area2D" parent="." unique_id=236416437]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1354212095]
+position = Vector2(8, 2)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_n5663")
+
+[node name="DPM_Poursuite" type="Node2D" parent="." unique_id=1290480813 node_paths=PackedStringArray("Poursuivant")]
+script = ExtResource("3_n5663")
+Poursuivant = NodePath("..")

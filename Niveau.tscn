@@ -1,0 +1,344 @@
+[gd_scene format=3 uid="uid://dse4nm2gt81s5"]
+
+[ext_resource type="Texture2D" uid="uid://ctxnsemdd7bv5" path="res://res/Fantasy Forest 1/bg_color_dark2.png" id="2_3s1m1"]
+[ext_resource type="Texture2D" uid="uid://cl5nmdu1sp7or" path="res://res/Fantasy Forest 1/bg_color.png" id="2_sdggm"]
+[ext_resource type="Texture2D" uid="uid://b0lorhwb4wfa2" path="res://res/Fantasy Forest 1/bg_color_dark1.png" id="3_7ufvj"]
+[ext_resource type="Texture2D" uid="uid://d0kjyupiwllod" path="res://res/Fantasy Forest 1/ground3.png" id="5_3vec1"]
+[ext_resource type="Texture2D" uid="uid://b1txmfe8ia2w" path="res://res/Fantasy Forest 1/ground9.png" id="6_bvsml"]
+[ext_resource type="Texture2D" uid="uid://cj2j85fkwa2qb" path="res://res/Fantasy Forest 1/ground8.png" id="7_lyhln"]
+[ext_resource type="Texture2D" uid="uid://b16s0hl8dfrl8" path="res://res/Fantasy Forest 1/ground4.png" id="8_nqgi4"]
+[ext_resource type="Texture2D" uid="uid://d4d3s7dd426yx" path="res://res/Fantasy Forest 1/ground1.png" id="9_xxkvu"]
+[ext_resource type="Texture2D" uid="uid://bjnveaijvnnb0" path="res://res/Fantasy Forest 1/ground2.png" id="10_11scq"]
+[ext_resource type="Texture2D" uid="uid://s54etq1mfv80" path="res://res/Fantasy Forest 1/mushroom1.png" id="11_2qyop"]
+[ext_resource type="Texture2D" uid="uid://bcpeyrntp3qsu" path="res://res/Fantasy Forest 1/mushroom2.png" id="12_4k40v"]
+[ext_resource type="Texture2D" uid="uid://eds4767hfoak" path="res://res/Fantasy Forest 1/mushroom3.png" id="13_8f2nu"]
+[ext_resource type="Texture2D" uid="uid://cnlo6l7v5676t" path="res://res/Fantasy Forest 1/m_pillar1.png" id="14_qeu34"]
+[ext_resource type="Texture2D" uid="uid://bly0qft5pt8ve" path="res://res/Fantasy Forest 1/m_pillar2.png" id="15_d3ejn"]
+[ext_resource type="Texture2D" uid="uid://c6nknem087dnv" path="res://res/Fantasy Forest 1/m_pillar4.png" id="16_2820u"]
+[ext_resource type="Texture2D" uid="uid://p2wm0ucis1th" path="res://res/Fantasy Forest 1/ruin2.png" id="17_2y3gk"]
+[ext_resource type="Texture2D" uid="uid://c3rjxxcsroduh" path="res://res/Fantasy Forest 1/stone5.png" id="18_hyav3"]
+[ext_resource type="Texture2D" uid="uid://eodpuoel1sqy" path="res://res/Fantasy Forest 1/tree2.png" id="19_1am4y"]
+[ext_resource type="Texture2D" uid="uid://cd0xtdwdgur8s" path="res://res/Fantasy Forest 1/tree4.png" id="20_bvsml"]
+[ext_resource type="Texture2D" uid="uid://dvh26fd31tiw2" path="res://res/Fantasy Forest 1/tree5.png" id="20_tw014"]
+[ext_resource type="Texture2D" uid="uid://bwm5b8h3003ui" path="res://res/Fantasy Forest 1/tree1.png" id="21_fe3s8"]
+[ext_resource type="Texture2D" uid="uid://dl5utuyrnrm6k" path="res://res/Fantasy Forest 1/top4.png" id="21_lyhln"]
+[ext_resource type="Script" uid="uid://dpyty4oxk4wbe" path="res://DcmWindSystem.cs" id="24_11scq"]
+[ext_resource type="Texture2D" uid="uid://c365ssh8u4s1a" path="res://res/Fantasy Forest 1/tree3.png" id="24_nqgi4"]
+[ext_resource type="Texture2D" uid="uid://d2qjtmogqimtu" path="res://res/Fantasy Forest 1/grass4.png" id="25_xxkvu"]
+[ext_resource type="Script" uid="uid://2paj85gedwrg" path="res://Library/Util/Oscillation.cs" id="26_11scq"]
+[ext_resource type="Script" uid="uid://bcm1p10ngxbnf" path="res://Library/Exemple/DCM_PlayerSwitch.cs" id="27_8f2nu"]
+[ext_resource type="PackedScene" uid="uid://4k1y5m26yoqi" path="res://ZoneGagnante.tscn" id="27_qeu34"]
+[ext_resource type="PackedScene" uid="uid://b5wpxclhauhye" path="res://chat.tscn" id="28_4k40v"]
+[ext_resource type="PackedScene" uid="uid://bh0cbyl63lov7" path="res://Chien.tscn" id="30_qeu34"]
+[ext_resource type="PackedScene" uid="uid://cgbr8mnne5v80" path="res://Souris.tscn" id="31_d3ejn"]
+[ext_resource type="PackedScene" uid="uid://dtbnlkci4ic61" path="res://dcm_spawner_cible.tscn" id="32_2820u"]
+
+[node name="Niveau" type="Node2D" unique_id=1011159092]
+
+[node name="ArrierePlan" type="Node2D" parent="." unique_id=2030436484]
+
+[node name="Ciel" type="Node2D" parent="ArrierePlan" unique_id=900176074]
+position = Vector2(-45, -9)
+rotation = -0.0141803725
+
+[node name="Dark1" type="Node2D" parent="ArrierePlan/Ciel" unique_id=44983467]
+
+[node name="BgColorDark11" type="Sprite2D" parent="ArrierePlan/Ciel/Dark1" unique_id=770047425]
+position = Vector2(-520, 45)
+texture = ExtResource("2_3s1m1")
+
+[node name="BgColorDark12" type="Sprite2D" parent="ArrierePlan/Ciel/Dark1" unique_id=1015822491]
+position = Vector2(-361.99997, 94.00001)
+scale = Vector2(1.7222222, 1.3994975)
+texture = ExtResource("2_3s1m1")
+
+[node name="BgColorDark13" type="Sprite2D" parent="ArrierePlan/Ciel/Dark1" unique_id=441296842]
+position = Vector2(-217.99998, 67.00001)
+scale = Vector2(1.7222222, 1.3994975)
+texture = ExtResource("2_3s1m1")
+
+[node name="BgColorDark14" type="Sprite2D" parent="ArrierePlan/Ciel/Dark1" unique_id=279054118]
+position = Vector2(119.000046, 67)
+scale = Vector2(1.7222222, 1.3994975)
+texture = ExtResource("2_3s1m1")
+
+[node name="BgColorDark15" type="Sprite2D" parent="ArrierePlan/Ciel/Dark1" unique_id=1706077671]
+position = Vector2(454, 36)
+scale = Vector2(1.7222222, 1.3994975)
+texture = ExtResource("2_3s1m1")
+
+[node name="BgColorDark16" type="Sprite2D" parent="ArrierePlan/Ciel/Dark1" unique_id=127460859]
+position = Vector2(561, 3.0000038)
+scale = Vector2(1.7222222, 1.3994975)
+texture = ExtResource("2_3s1m1")
+
+[node name="Dark2" type="Node2D" parent="ArrierePlan/Ciel" unique_id=214592903]
+
+[node name="BgColorDark1" type="Sprite2D" parent="ArrierePlan/Ciel/Dark2" unique_id=1213333504]
+position = Vector2(-457, -291)
+scale = Vector2(1.6290323, 1.34)
+texture = ExtResource("3_7ufvj")
+
+[node name="BgColorDark3" type="Sprite2D" parent="ArrierePlan/Ciel/Dark2" unique_id=1675811357]
+position = Vector2(-261.99997, -277)
+scale = Vector2(1.6290323, 1.34)
+texture = ExtResource("3_7ufvj")
+
+[node name="BgColorDark4" type="Sprite2D" parent="ArrierePlan/Ciel/Dark2" unique_id=2076665412]
+position = Vector2(-261.99997, -277)
+scale = Vector2(1.6290323, 1.34)
+texture = ExtResource("3_7ufvj")
+
+[node name="BgColorDark2" type="Sprite2D" parent="ArrierePlan/Ciel/Dark2" unique_id=368790709]
+position = Vector2(-495.00003, -108)
+scale = Vector2(1.8935484, 1.515)
+texture = ExtResource("3_7ufvj")
+
+[node name="BgColorDark5" type="Sprite2D" parent="ArrierePlan/Ciel/Dark2" unique_id=1010442894]
+position = Vector2(-380, -141)
+scale = Vector2(1.8935484, 1.515)
+texture = ExtResource("3_7ufvj")
+
+[node name="BgColorDark6" type="Sprite2D" parent="ArrierePlan/Ciel/Dark2" unique_id=1177096974]
+position = Vector2(192.99994, -283)
+scale = Vector2(1.8935484, 1.515)
+texture = ExtResource("3_7ufvj")
+
+[node name="BgColorDark7" type="Sprite2D" parent="ArrierePlan/Ciel/Dark2" unique_id=1579320104]
+position = Vector2(-246.99997, -188)
+scale = Vector2(1.8935484, 1.515)
+texture = ExtResource("3_7ufvj")
+
+[node name="BgColorDark8" type="Sprite2D" parent="ArrierePlan/Ciel/Dark2" unique_id=1122835435]
+position = Vector2(-563, -254)
+scale = Vector2(1.8935484, 1.515)
+texture = ExtResource("3_7ufvj")
+
+[node name="BgColorDark9" type="Sprite2D" parent="ArrierePlan/Ciel/Dark2" unique_id=797126355]
+position = Vector2(553.9999, -240)
+scale = Vector2(1.8935484, 1.515)
+texture = ExtResource("3_7ufvj")
+
+[node name="BgColorDark10" type="Sprite2D" parent="ArrierePlan/Ciel/Dark2" unique_id=1528032343]
+position = Vector2(553.9999, -240)
+scale = Vector2(1.8935484, 1.515)
+texture = ExtResource("3_7ufvj")
+
+[node name="Pale" type="Node2D" parent="ArrierePlan/Ciel" unique_id=1203249584]
+
+[node name="Sprite2D" type="Sprite2D" parent="ArrierePlan/Ciel/Pale" unique_id=798053556]
+position = Vector2(-112, -227)
+scale = Vector2(2.2639751, 1.7869955)
+texture = ExtResource("2_sdggm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ArrierePlan/Ciel/Pale" unique_id=2088567939]
+position = Vector2(-80, -7.0000076)
+scale = Vector2(2.2639751, 1.7869955)
+texture = ExtResource("2_sdggm")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ArrierePlan/Ciel/Pale" unique_id=41408697]
+position = Vector2(39, -214)
+scale = Vector2(2.2639751, 1.7869955)
+texture = ExtResource("2_sdggm")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ArrierePlan/Ciel/Pale" unique_id=406092542]
+position = Vector2(288, -39.000015)
+scale = Vector2(2.2639751, 1.7869955)
+texture = ExtResource("2_sdggm")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ArrierePlan/Ciel/Pale" unique_id=2135948136]
+position = Vector2(424, -248)
+scale = Vector2(2.2639751, 1.7869955)
+texture = ExtResource("2_sdggm")
+
+[node name="Sol" type="Node2D" parent="ArrierePlan" unique_id=1551158941]
+
+[node name="Ground3" type="Sprite2D" parent="ArrierePlan/Sol" unique_id=225820768]
+position = Vector2(-525, 191.99998)
+rotation = 0.25142723
+scale = Vector2(1.2462546, 1.028125)
+texture = ExtResource("5_3vec1")
+
+[node name="Ground9" type="Sprite2D" parent="ArrierePlan/Sol" unique_id=769872970]
+position = Vector2(-492, 292)
+rotation = 0.01623176
+texture = ExtResource("6_bvsml")
+
+[node name="Ground8" type="Sprite2D" parent="ArrierePlan/Sol" unique_id=806243072]
+position = Vector2(-237, 298)
+texture = ExtResource("7_lyhln")
+
+[node name="Ground11" type="Sprite2D" parent="ArrierePlan/Sol" unique_id=450351106]
+position = Vector2(423.00003, 296)
+rotation = -0.10593381
+scale = Vector2(0.99999994, 1)
+texture = ExtResource("6_bvsml")
+
+[node name="Ground10" type="Sprite2D" parent="ArrierePlan/Sol" unique_id=536215634]
+position = Vector2(159, 281.00003)
+rotation = -0.20698725
+scale = Vector2(1.0473193, 1.0959659)
+texture = ExtResource("7_lyhln")
+
+[node name="Ground4" type="Sprite2D" parent="ArrierePlan/Sol" unique_id=373714142]
+position = Vector2(-291.99997, 163.99998)
+rotation = -0.00095513463
+texture = ExtResource("8_nqgi4")
+
+[node name="Ground1" type="Sprite2D" parent="ArrierePlan/Sol" unique_id=48675532]
+position = Vector2(-94.35307, 183.82697)
+rotation = -0.15095611
+scale = Vector2(1, 1.136894)
+texture = ExtResource("9_xxkvu")
+
+[node name="Ground2" type="Sprite2D" parent="ArrierePlan/Sol" unique_id=870311481]
+position = Vector2(89, 157)
+texture = ExtResource("10_11scq")
+
+[node name="Ground5" type="Sprite2D" parent="ArrierePlan/Sol" unique_id=1917326058]
+position = Vector2(476.75, 162.00002)
+scale = Vector2(1.0131086, 1.3788822)
+texture = ExtResource("10_11scq")
+
+[node name="Ground6" type="Sprite2D" parent="ArrierePlan/Sol" unique_id=1203732237]
+position = Vector2(289, 152)
+texture = ExtResource("5_3vec1")
+
+[node name="Doodad" type="Node2D" parent="ArrierePlan" unique_id=351764529]
+
+[node name="Mushroom1" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=737141227]
+position = Vector2(-508, 185)
+texture = ExtResource("11_2qyop")
+
+[node name="Mushroom2" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=1326093882]
+position = Vector2(-161, 169)
+texture = ExtResource("12_4k40v")
+
+[node name="Mushroom3" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=1166237071]
+position = Vector2(100, 154)
+texture = ExtResource("13_8f2nu")
+
+[node name="MPillar1" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=847936697]
+position = Vector2(482, 203)
+texture = ExtResource("14_qeu34")
+
+[node name="MPillar2" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=1828563651]
+position = Vector2(-332, 39)
+texture = ExtResource("15_d3ejn")
+
+[node name="MPillar4" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=1928457356]
+position = Vector2(-30, 101)
+texture = ExtResource("16_2820u")
+
+[node name="Ruin2" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=640285361]
+position = Vector2(-488, 35)
+texture = ExtResource("17_2y3gk")
+
+[node name="Stone5" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=1034882343]
+position = Vector2(-321, 230)
+texture = ExtResource("18_hyav3")
+
+[node name="Tree2" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=1246162757]
+position = Vector2(97.00001, -8)
+scale = Vector2(0.9139942, 0.91399413)
+texture = ExtResource("19_1am4y")
+
+[node name="Tree4" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=33972426]
+position = Vector2(410, -60)
+texture = ExtResource("20_bvsml")
+
+[node name="Top4" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=1265464233]
+position = Vector2(-1, 200.99998)
+scale = Vector2(0.6098039, 0.6098039)
+texture = ExtResource("21_lyhln")
+
+[node name="Tree5" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=1682435153]
+position = Vector2(-432, 107)
+texture = ExtResource("20_tw014")
+
+[node name="Tree1" type="Sprite2D" parent="ArrierePlan/Doodad" unique_id=1770886139]
+position = Vector2(-638, -56)
+scale = Vector2(1.0408163, 0.98920864)
+texture = ExtResource("21_fe3s8")
+
+[node name="ExempleTween" type="Sprite2D" parent="ArrierePlan" unique_id=1155327704]
+modulate = Color(1, 0.21176471, 1, 1)
+position = Vector2(-429, 54)
+texture = ExtResource("24_nqgi4")
+
+[node name="DCM_WindSystem" type="Node2D" parent="ArrierePlan" unique_id=276631679]
+script = ExtResource("24_11scq")
+
+[node name="Grass4" type="Sprite2D" parent="ArrierePlan/DCM_WindSystem" unique_id=586694273 node_paths=PackedStringArray("node")]
+position = Vector2(1, -3)
+scale = Vector2(6.357143, 6.357143)
+texture = ExtResource("25_xxkvu")
+centered = false
+offset = Vector2(-14.722303, -31.25309)
+script = ExtResource("26_11scq")
+node = NodePath(".")
+
+[node name="Grass5" type="Sprite2D" parent="ArrierePlan/DCM_WindSystem" unique_id=276645898 node_paths=PackedStringArray("node")]
+position = Vector2(-268, 10)
+scale = Vector2(6.357143, 6.357143)
+texture = ExtResource("25_xxkvu")
+centered = false
+offset = Vector2(-14.722303, -31.25309)
+script = ExtResource("26_11scq")
+node = NodePath(".")
+
+[node name="Grass6" type="Sprite2D" parent="ArrierePlan/DCM_WindSystem" unique_id=679054382 node_paths=PackedStringArray("node")]
+position = Vector2(137.00003, -316)
+scale = Vector2(6.357143, 6.357143)
+texture = ExtResource("25_xxkvu")
+centered = false
+offset = Vector2(-14.722303, -31.25309)
+script = ExtResource("26_11scq")
+node = NodePath(".")
+
+[node name="Grass7" type="Sprite2D" parent="ArrierePlan/DCM_WindSystem" unique_id=1681632525 node_paths=PackedStringArray("node")]
+position = Vector2(304, -19)
+scale = Vector2(6.357143, 6.357143)
+texture = ExtResource("25_xxkvu")
+centered = false
+offset = Vector2(-14.722303, -31.25309)
+script = ExtResource("26_11scq")
+node = NodePath(".")
+
+[node name="Grass8" type="Sprite2D" parent="ArrierePlan/DCM_WindSystem" unique_id=965608063 node_paths=PackedStringArray("node")]
+position = Vector2(-369, -336)
+scale = Vector2(6.357143, 6.357143)
+texture = ExtResource("25_xxkvu")
+centered = false
+offset = Vector2(-14.722303, -31.25309)
+script = ExtResource("26_11scq")
+node = NodePath(".")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1714769416]
+
+[node name="FinNiveau" type="Node2D" parent="." unique_id=1049685621]
+
+[node name="ZoneGagnante" parent="FinNiveau" unique_id=216072968 instance=ExtResource("27_qeu34")]
+position = Vector2(-148, 207)
+
+[node name="ZoneGagnante2" parent="FinNiveau" unique_id=596688505 instance=ExtResource("27_qeu34")]
+modulate = Color(0.90962017, 0.9261595, 0.13686374, 0.41568628)
+position = Vector2(457, 139)
+
+[node name="DCM_PlayerSwicth" type="Node2D" parent="." unique_id=426318767]
+script = ExtResource("27_8f2nu")
+
+[node name="Chat" parent="DCM_PlayerSwicth" unique_id=1716285648 instance=ExtResource("28_4k40v")]
+position = Vector2(-152.00005, 32.00003)
+
+[node name="Chat2" parent="DCM_PlayerSwicth" unique_id=1523200151 instance=ExtResource("28_4k40v")]
+position = Vector2(207.99998, 183.00002)
+
+[node name="Chien" parent="." unique_id=159615892 node_paths=PackedStringArray("Cible") instance=ExtResource("30_qeu34")]
+Cible = NodePath("../DCM_PlayerSwicth/Chat")
+
+[node name="Souris" parent="." unique_id=968117836 node_paths=PackedStringArray("Cible") instance=ExtResource("31_d3ejn")]
+position = Vector2(-319, 47)
+Cible = NodePath("../DCM_PlayerSwicth/Chat")
+
+[node name="DCM_SpawnerCible" parent="." unique_id=192703619 instance=ExtResource("32_2820u")]

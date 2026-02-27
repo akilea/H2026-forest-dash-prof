@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="02-ForestDash"
+run/main_scene="uid://dse4nm2gt81s5"
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="02-ForestDash"
+
+[global_group]
+
+Chasseur=""
+Proie=""
+
+[layer_names]
+
+2d_physics/layer_1="ChatGauche"
+2d_physics/layer_2="ChatDroit"
+2d_physics/layer_3="FinGauche"
+2d_physics/layer_4="FinDroite"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"

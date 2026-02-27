@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b5wpxclhauhye"]
+
+[ext_resource type="Texture2D" uid="uid://6gcyxllflji5" path="res://res/chat.png" id="1_t67cl"]
+[ext_resource type="Script" uid="uid://ccy0q75uippsl" path="res://Chat.cs" id="2_jqtso"]
+[ext_resource type="Script" uid="uid://dd1vqfjlrrph0" path="res://Library/Util/SimplePlayer.cs" id="2_mp2uv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8f2nu"]
+radius = 4.3955956
+height = 21.978012
+
+[node name="Chat" type="Sprite2D" unique_id=1716285648 node_paths=PackedStringArray("SimplePlayer")]
+scale = Vector2(3.64, 3.64)
+texture = ExtResource("1_t67cl")
+script = ExtResource("2_jqtso")
+SimplePlayer = NodePath("DPM_SimpleMouvement")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1930039905]
+position = Vector2(0, -0.27472526)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=795062408]
+position = Vector2(-0.5494421, -0.8241715)
+rotation = 1.5713923
+shape = SubResource("CapsuleShape2D_8f2nu")
+
+[node name="DPM_SimpleMouvement" type="Node2D" parent="." unique_id=360269676 node_paths=PackedStringArray("NodeToControl")]
+script = ExtResource("2_mp2uv")
+NodeToControl = NodePath("..")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="OnAreaEntered"]
