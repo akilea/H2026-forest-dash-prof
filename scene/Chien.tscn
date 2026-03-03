@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bh0cbyl63lov7"]
 
-[ext_resource type="Script" uid="uid://c2nr77e2r4u31" path="res://Chien.cs" id="1_olwrm"]
+[ext_resource type="Script" uid="uid://c2nr77e2r4u31" path="res://src/Chien.cs" id="1_olwrm"]
 [ext_resource type="Texture2D" uid="uid://cmbeccpuqcbi3" path="res://res/Pet Dogs Pack/Dog-1-Golden-Retriever/Golden-Retriever-idle.png" id="2_w4hss"]
 [ext_resource type="Script" uid="uid://b2xljy2v27rci" path="res://Library/Util/Poursuite.cs" id="3_n5663"]
 
@@ -19,6 +19,8 @@ hframes = 10
 frame = 5
 
 [node name="Area2D" type="Area2D" parent="." unique_id=236416437]
+collision_layer = 0
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1354212095]
 position = Vector2(8, 2)
@@ -28,3 +30,4 @@ shape = SubResource("CapsuleShape2D_n5663")
 [node name="DPM_Poursuite" type="Node2D" parent="." unique_id=1290480813 node_paths=PackedStringArray("Poursuivant")]
 script = ExtResource("3_n5663")
 Poursuivant = NodePath("..")
+Velocity = 30.0

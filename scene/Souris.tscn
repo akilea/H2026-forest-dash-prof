@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cgbr8mnne5v80"]
 
-[ext_resource type="Script" uid="uid://db0ylhlcwyy0x" path="res://Souris.cs" id="1_ieqki"]
+[ext_resource type="Script" uid="uid://db0ylhlcwyy0x" path="res://src/Souris.cs" id="1_ieqki"]
 [ext_resource type="Texture2D" uid="uid://dhrktytstels6" path="res://res/MouseSpritesheet.png" id="2_dhdmd"]
 [ext_resource type="Script" uid="uid://b2xljy2v27rci" path="res://Library/Util/Poursuite.cs" id="3_0k2kh"]
+[ext_resource type="Script" uid="uid://vkav3ymr6lbp" path="res://src/DpmEliminationAuContact.cs" id="3_540nf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n5663"]
 radius = 43.997562
@@ -19,9 +20,13 @@ texture = ExtResource("2_dhdmd")
 hframes = 4
 vframes = 12
 
-[node name="Area2D" type="Area2D" parent="." unique_id=236416437]
+[node name="DPM_ElimnationAuContact" type="Area2D" parent="." unique_id=236416437 node_paths=PackedStringArray("RootToEliminate")]
+collision_layer = 16
+collision_mask = 3
+script = ExtResource("3_540nf")
+RootToEliminate = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1354212095]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DPM_ElimnationAuContact" unique_id=1354212095]
 position = Vector2(8, 2)
 rotation = 3.1310644
 shape = SubResource("CapsuleShape2D_n5663")
@@ -29,4 +34,4 @@ shape = SubResource("CapsuleShape2D_n5663")
 [node name="DPM_Poursuite" type="Node2D" parent="." unique_id=1290480813 node_paths=PackedStringArray("Poursuivant")]
 script = ExtResource("3_0k2kh")
 Poursuivant = NodePath("..")
-Velocity = -100.0
+Velocity = -40.0

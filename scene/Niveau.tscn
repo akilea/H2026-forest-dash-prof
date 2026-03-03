@@ -22,16 +22,16 @@
 [ext_resource type="Texture2D" uid="uid://dvh26fd31tiw2" path="res://res/Fantasy Forest 1/tree5.png" id="20_tw014"]
 [ext_resource type="Texture2D" uid="uid://bwm5b8h3003ui" path="res://res/Fantasy Forest 1/tree1.png" id="21_fe3s8"]
 [ext_resource type="Texture2D" uid="uid://dl5utuyrnrm6k" path="res://res/Fantasy Forest 1/top4.png" id="21_lyhln"]
-[ext_resource type="Script" uid="uid://dpyty4oxk4wbe" path="res://DcmWindSystem.cs" id="24_11scq"]
+[ext_resource type="Script" uid="uid://dpyty4oxk4wbe" path="res://src/DcmWindSystem.cs" id="24_11scq"]
 [ext_resource type="Texture2D" uid="uid://c365ssh8u4s1a" path="res://res/Fantasy Forest 1/tree3.png" id="24_nqgi4"]
 [ext_resource type="Texture2D" uid="uid://d2qjtmogqimtu" path="res://res/Fantasy Forest 1/grass4.png" id="25_xxkvu"]
 [ext_resource type="Script" uid="uid://2paj85gedwrg" path="res://Library/Util/Oscillation.cs" id="26_11scq"]
 [ext_resource type="Script" uid="uid://bcm1p10ngxbnf" path="res://Library/Exemple/DCM_PlayerSwitch.cs" id="27_8f2nu"]
-[ext_resource type="PackedScene" uid="uid://4k1y5m26yoqi" path="res://ZoneGagnante.tscn" id="27_qeu34"]
-[ext_resource type="PackedScene" uid="uid://b5wpxclhauhye" path="res://chat.tscn" id="28_4k40v"]
-[ext_resource type="PackedScene" uid="uid://bh0cbyl63lov7" path="res://Chien.tscn" id="30_qeu34"]
-[ext_resource type="PackedScene" uid="uid://cgbr8mnne5v80" path="res://Souris.tscn" id="31_d3ejn"]
-[ext_resource type="PackedScene" uid="uid://dtbnlkci4ic61" path="res://dcm_spawner_cible.tscn" id="32_2820u"]
+[ext_resource type="PackedScene" uid="uid://4k1y5m26yoqi" path="res://scene/ZoneGagnante.tscn" id="27_qeu34"]
+[ext_resource type="PackedScene" uid="uid://b5wpxclhauhye" path="res://scene/chat.tscn" id="28_4k40v"]
+[ext_resource type="PackedScene" uid="uid://bh0cbyl63lov7" path="res://scene/Chien.tscn" id="30_qeu34"]
+[ext_resource type="PackedScene" uid="uid://cgbr8mnne5v80" path="res://scene/Souris.tscn" id="31_d3ejn"]
+[ext_resource type="PackedScene" uid="uid://dtbnlkci4ic61" path="res://scene/dcm_spawner.tscn" id="32_2rpq3"]
 
 [node name="Niveau" type="Node2D" unique_id=1011159092]
 
@@ -341,4 +341,6 @@ Cible = NodePath("../DCM_PlayerSwicth/Chat")
 position = Vector2(-319, 47)
 Cible = NodePath("../DCM_PlayerSwicth/Chat")
 
-[node name="DCM_SpawnerCible" parent="." unique_id=192703619 instance=ExtResource("32_2820u")]
+[node name="DCM_Spawner" parent="." unique_id=192703619 instance=ExtResource("32_2rpq3")]
+position = Vector2(221, 65)
+SpawneeScene = ExtResource("31_d3ejn")

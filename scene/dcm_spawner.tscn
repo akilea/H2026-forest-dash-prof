@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dtbnlkci4ic61"]
+
+[ext_resource type="Script" uid="uid://dor1pcug1mk0y" path="res://src/DcmSpawner.cs" id="1_jd41g"]
+
+[node name="DCM_Spawner" type="Node2D" unique_id=192703619 node_paths=PackedStringArray("timer")]
+script = ExtResource("1_jd41g")
+timer = NodePath("DPM_Timer")
+
+[node name="DPM_Timer" type="Timer" parent="." unique_id=137883668]
+autostart = true
