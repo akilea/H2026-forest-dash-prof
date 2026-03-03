@@ -13,7 +13,6 @@ config_version=5
 config/name="02-ForestDash"
 run/main_scene="uid://dse4nm2gt81s5"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
-config/icon="res://icon.svg"
 
 [dotnet]
 

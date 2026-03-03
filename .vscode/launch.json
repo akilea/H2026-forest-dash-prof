@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "F:/DDJV/Core/Godot_v4.6-stable_mono_win64/Godot_v4.6-stable_mono_win64.exe",
+            "program": "C:/Users/Marc-Andre/Documents/CVM/DDJV/Core/Godot_v4.6-stable_mono_win64/Godot_v4.6-stable_mono_win64.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,

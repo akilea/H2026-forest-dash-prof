@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dtbnlkci4ic61"]
 
-[ext_resource type="Script" uid="uid://d2tlif3rmdq30" path="res://DcmSpawnerCible.cs" id="1_3uh0l"]
-[ext_resource type="PackedScene" uid="uid://cgbr8mnne5v80" path="res://Souris.tscn" id="2_31o0g"]
+[ext_resource type="Script" uid="uid://d2tlif3rmdq30" path="res://src/DcmSpawnerCible.cs" id="1_3uh0l"]
+[ext_resource type="PackedScene" uid="uid://cgbr8mnne5v80" path="res://scene/Souris.tscn" id="2_31o0g"]
 
 [node name="DCM_SpawnerCible" type="Node2D" unique_id=192703619 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_3uh0l")

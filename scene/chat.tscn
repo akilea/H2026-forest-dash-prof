@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b5wpxclhauhye"]
 
 [ext_resource type="Texture2D" uid="uid://6gcyxllflji5" path="res://res/chat.png" id="1_t67cl"]
-[ext_resource type="Script" uid="uid://ccy0q75uippsl" path="res://Chat.cs" id="2_jqtso"]
+[ext_resource type="Script" uid="uid://ccy0q75uippsl" path="res://src/Chat.cs" id="2_jqtso"]
 [ext_resource type="Script" uid="uid://dd1vqfjlrrph0" path="res://Library/Util/SimplePlayer.cs" id="2_mp2uv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8f2nu"]

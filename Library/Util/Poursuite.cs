@@ -18,7 +18,10 @@ public partial class Poursuite : Node2D
     {
         base._PhysicsProcess(InDelta);
         Poursuivant.EnsureValid();
-        Cible.EnsureValid();
+        if (!Cible.IsValid())
+        {
+            return;
+        }
 
         //Manière longue de calculer la direction - important
         //direction et altDirection donnent le même résultat

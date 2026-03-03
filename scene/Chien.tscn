@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bh0cbyl63lov7"]
 
-[ext_resource type="Script" uid="uid://c2nr77e2r4u31" path="res://Chien.cs" id="1_olwrm"]
+[ext_resource type="Script" uid="uid://c2nr77e2r4u31" path="res://src/Chien.cs" id="1_olwrm"]
 [ext_resource type="Texture2D" uid="uid://cmbeccpuqcbi3" path="res://res/Pet Dogs Pack/Dog-1-Golden-Retriever/Golden-Retriever-idle.png" id="2_w4hss"]
 [ext_resource type="Script" uid="uid://b2xljy2v27rci" path="res://Library/Util/Poursuite.cs" id="3_n5663"]
 
