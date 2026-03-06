@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://rw1uojygqr8j"]
+
+[ext_resource type="Script" uid="uid://f0cxaljegeuc" path="res://scene/MedCible.cs" id="1_gcmmd"]
+
+[node name="MED_Cible" type="Node2D" unique_id=1329805077]
+script = ExtResource("1_gcmmd")

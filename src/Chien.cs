@@ -2,7 +2,7 @@ using System;
 using Godot;
 using Utils;
 
-public partial class Chien : Node2D
+public partial class Chien : Node2D, ICiblable
 {
     [ExportGroup("External")]
     [Export]
@@ -16,14 +16,23 @@ public partial class Chien : Node2D
     [Export]
     Poursuite _Poursuite;
 
+    [Export]
+    EntityAnimation _Animation;
+
     public override void _Ready()
     {
         base._Ready();
+        Vector2 oldScale = Scale;
         Scale = Vector2.Zero;
         Tween tween = CreateTween();
         tween
-            .TweenProperty(this, "scale", Vector2.One, 0.5f)
+            .TweenProperty(this, "scale", oldScale, 0.5f)
             .SetTrans(Tween.TransitionType.Back)
             .SetEase(Tween.EaseType.Out);
+    }
+
+    public void SetCible(Node2D InCible)
+    {
+        Cible = InCible;
     }
 }

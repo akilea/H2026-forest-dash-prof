@@ -2,7 +2,7 @@ using System;
 using Godot;
 using Utils;
 
-public partial class Souris : Node2D
+public partial class Souris : Node2D, ICiblable
 {
     [ExportGroup("External")]
     [Export]
@@ -25,5 +25,10 @@ public partial class Souris : Node2D
             .TweenProperty(this, "scale", Vector2.One, 0.5f)
             .SetTrans(Tween.TransitionType.Back)
             .SetEase(Tween.EaseType.Out);
+    }
+
+    public void SetCible(Node2D InCible)
+    {
+        Cible = InCible;
     }
 }
