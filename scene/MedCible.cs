@@ -26,9 +26,8 @@ public partial class MedCible : Node2D
         eMAX,
     }
 
-    Node2D ChoisirCible(EAlgoSelectionCible InAlgoSelectionCible, Vector2 InPosition)
+    public Node2D ChoisirCible(EAlgoSelectionCible InAlgoSelectionCible, Vector2 InPosition)
     {
-        SpawnerChat.EnsureValid();
         SpawnerSouris.EnsureValid();
         SpawnerChien.EnsureValid();
         Node2D retCible = null;
@@ -39,13 +38,10 @@ public partial class MedCible : Node2D
                 break;
             case EAlgoSelectionCible.eChien:
                 {
-                    IEnumerable<Chat> list = SpawnerChat
-                        .GatherChildren()
-                        .OfType<Chat>()
-                        .Where(s => s.IsActive);
-                    retCible = list.FirstOrDefault<Chat>(s => s.IsActive);
+                    IEnumerable<Souris> list = SpawnerSouris.GatherChildren().OfType<Souris>();
+                    retCible = list.FirstOrDefault<Souris>();
 
-                    IEnumerable<Chat> list2 = SpawnerChat.GatherChildren().OfType<Chat>();
+                    IEnumerable<Souris> list2 = SpawnerSouris.GatherChildren().OfType<Souris>();
                 }
                 break;
             default:

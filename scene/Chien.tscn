@@ -1,8 +1,72 @@
 [gd_scene format=3 uid="uid://bh0cbyl63lov7"]
 
 [ext_resource type="Script" uid="uid://c2nr77e2r4u31" path="res://src/Chien.cs" id="1_olwrm"]
-[ext_resource type="Texture2D" uid="uid://cmbeccpuqcbi3" path="res://res/Pet Dogs Pack/Dog-1-Golden-Retriever/Golden-Retriever-idle.png" id="2_w4hss"]
+[ext_resource type="Texture2D" uid="uid://02rjiiw60iq2" path="res://res/Pet Dogs Pack/Dog-6-Siberian-Husky/Siberian-Husky-run.png" id="2_djirq"]
 [ext_resource type="Script" uid="uid://b2xljy2v27rci" path="res://Library/Util/Poursuite.cs" id="3_n5663"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcyix"]
+atlas = ExtResource("2_djirq")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yau4v"]
+atlas = ExtResource("2_djirq")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb3j6"]
+atlas = ExtResource("2_djirq")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sms63"]
+atlas = ExtResource("2_djirq")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oo27"]
+atlas = ExtResource("2_djirq")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1vpm"]
+atlas = ExtResource("2_djirq")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f72y"]
+atlas = ExtResource("2_djirq")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjtnr"]
+atlas = ExtResource("2_djirq")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3uv1d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcyix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yau4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mb3j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sms63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0oo27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1vpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f72y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjtnr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n5663"]
 radius = 19.0
@@ -12,11 +76,13 @@ height = 94.0
 script = ExtResource("1_olwrm")
 _Poursuite = NodePath("DPM_Poursuite")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2028709627]
-scale = Vector2(4, 4)
-texture = ExtResource("2_w4hss")
-hframes = 10
-frame = 5
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1300936397]
+scale = Vector2(2.905, 2.905)
+sprite_frames = SubResource("SpriteFrames_3uv1d")
+autoplay = "default"
+frame = 1
+frame_progress = 0.4388959
+speed_scale = 4.49
 
 [node name="Area2D" type="Area2D" parent="." unique_id=236416437]
 

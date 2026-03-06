@@ -2,7 +2,7 @@ using System;
 using Godot;
 using Utils;
 
-public partial class Souris : Node2D
+public partial class Souris : Node2D, IEntity
 {
     [ExportGroup("External")]
     [Export]
@@ -15,6 +15,11 @@ public partial class Souris : Node2D
     [ExportGroup("Internal")]
     [Export]
     Poursuite _Poursuite;
+
+    public void SetCible(Node2D InCible)
+    {
+        Cible = InCible;
+    }
 
     public override void _Ready()
     {

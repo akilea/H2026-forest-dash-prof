@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://b5wpxclhauhye" path="res://scene/chat.tscn" id="28_4k40v"]
 [ext_resource type="PackedScene" uid="uid://bh0cbyl63lov7" path="res://scene/Chien.tscn" id="30_qeu34"]
 [ext_resource type="PackedScene" uid="uid://cgbr8mnne5v80" path="res://scene/Souris.tscn" id="31_d3ejn"]
-[ext_resource type="PackedScene" uid="uid://cg1y50dfmptrw" path="res://scene/dcm_spawner.tscn" id="32_2rpq3"]
+[ext_resource type="PackedScene" uid="uid://dtbnlkci4ic61" path="res://scene/dcm_spawner.tscn" id="32_2rpq3"]
 [ext_resource type="Script" uid="uid://bidguga56j5uq" path="res://scene/MedCible.cs" id="33_q1ccn"]
 
 [node name="Niveau" type="Node2D" unique_id=1011159092]
@@ -326,8 +326,11 @@ position = Vector2(-148, 207)
 modulate = Color(0.90962017, 0.9261595, 0.13686374, 0.41568628)
 position = Vector2(457, 139)
 
-[node name="MED_Cible" type="Node2D" parent="." unique_id=1500168718]
+[node name="MED_Cible" type="Node2D" parent="." unique_id=1500168718 node_paths=PackedStringArray("SpawnerChat", "SpawnerSouris", "SpawnerChien")]
 script = ExtResource("33_q1ccn")
+SpawnerChat = NodePath("DCM_PlayerSwitch")
+SpawnerSouris = NodePath("DCM_Spawner_Souris")
+SpawnerChien = NodePath("DCM_Spawner_Chien")
 
 [node name="DCM_PlayerSwitch" type="Node2D" parent="MED_Cible" unique_id=426318767]
 script = ExtResource("27_8f2nu")
@@ -338,10 +341,12 @@ position = Vector2(-152.00005, 32.00003)
 [node name="Chat2" parent="MED_Cible/DCM_PlayerSwitch" unique_id=1523200151 instance=ExtResource("28_4k40v")]
 position = Vector2(207.99998, 183.00002)
 
-[node name="DCM_Spawner_Souris" parent="MED_Cible" unique_id=100616317 instance=ExtResource("32_2rpq3")]
+[node name="DCM_Spawner_Souris" parent="MED_Cible" unique_id=100616317 node_paths=PackedStringArray("MediateurCible") instance=ExtResource("32_2rpq3")]
 position = Vector2(251, -14)
 SpawneeScene = ExtResource("31_d3ejn")
+MediateurCible = NodePath("..")
 
-[node name="DCM_Spawner_Chien" parent="MED_Cible" unique_id=273609933 instance=ExtResource("32_2rpq3")]
+[node name="DCM_Spawner_Chien" parent="MED_Cible" unique_id=273609933 node_paths=PackedStringArray("MediateurCible") instance=ExtResource("32_2rpq3")]
 SpawneeScene = ExtResource("30_qeu34")
 AlgoSelectionCible = 2
+MediateurCible = NodePath("..")

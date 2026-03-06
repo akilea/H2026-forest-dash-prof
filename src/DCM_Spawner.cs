@@ -37,15 +37,24 @@ public partial class DCM_Spawner : Node2D
         Node2D newInstance = SpawneeScene.Instantiate<Node2D>();
         newInstance.EnsureValid();
         AddChild(newInstance);
+        Node2D cible = MediateurCible
+            .EnsureValid()
+            .ChoisirCible(MedCible.EAlgoSelectionCible.eChien, GlobalPosition);
+
+        GD.Print(cible);
+        cible.EnsureValid();
+
+        //2 choix: interface (classique) OU classe commune
+        if (newInstance is IEntity ent)
+        {
+            ent.SetCible(cible);
+        }
         timer.EnsureValid().WaitTime = GD.RandRange(IntervalRange.X, IntervalRange.Y);
     }
 
     //Pourrait retourner des Souris ou autre classe au besoin
     public IEnumerable<Node2D> GatherChildren()
     {
-        var state = SpawneeScene.GetState();
-        // index 0 = root node dans de la scène
-        StringName nodeType = state.GetNodeType(0);
-        return FindChildren("*", nodeType, recursive: false, owned: false).OfType<Node2D>();
+        return ChildAccess.GatherChildren(SpawneeScene, this);
     }
 }
